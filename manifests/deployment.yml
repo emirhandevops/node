@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nodeap 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodeap
+  template:
+    metadata:
+      labels:
+        app: nodeap 
+    spec:
+      containers:
+        - name: nodeap 
+          image: emirhan.azurecr.io/nodeap
+          ports:
+          - containerPort: 3000
