@@ -20,7 +20,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerhublogin'
-    repository: 'emirhanaydin61/nodeapp'
+    repository: 'emirhanaydin.azurecr.io/nodeapp'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
 - task: KubernetesManifest@0
