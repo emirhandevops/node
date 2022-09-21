@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: Docker@2
   inputs:
-    containerRegistry: 'dockerhublogin'
+    containerRegistry: 'docker'
     repository: 'emirhanaydin.azurecr.io/nodeapp'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
