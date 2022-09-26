@@ -26,10 +26,5 @@ steps:
 - task: KubernetesManifest@0
   inputs:
     action: 'deploy'
-    kubernetesServiceConnection: 'kubernetes'
+    kubernetesServiceConnection: 'kubernetes-default-1664174226096'
     manifests: 'deployment.yml'
-- task: KubernetesManifest@0
-  inputs:
-    action: 'deploy'
-    kubernetesServiceConnection: 'kubernetes'
-    manifests: 'deploymentservice.yml'
