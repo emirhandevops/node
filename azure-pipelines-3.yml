@@ -23,3 +23,8 @@ steps:
     repository: 'emirhanaydin61/nodeapp'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'kubernetes-default-1664174226096'
+    manifests: 'web.yaml'
